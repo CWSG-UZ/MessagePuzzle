@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MessagePuzzle/1.0.0": {
+        "runtime": {
+          "MessagePuzzle.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MessagePuzzle/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
