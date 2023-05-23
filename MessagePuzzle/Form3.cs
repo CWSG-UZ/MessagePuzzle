@@ -19,6 +19,7 @@ namespace MessagePuzzle
         {
             InitializeComponent();
             this.time = time;
+            Text = "Weź kierunek na UZ!";
         }
 
         private void Form3_Load(object sender, EventArgs e)

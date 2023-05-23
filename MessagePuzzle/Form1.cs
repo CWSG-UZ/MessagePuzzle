@@ -43,7 +43,7 @@ namespace MessagePuzzle
 
         private void InitializeAnswers()
         {
-            answers = new string[] { "A", "B", "C" };
+            answers = new string[] { "VmpKWVJuVnBRbkpoVVQwOQ==", "V2xoS01XSnRWbkk9", "U1VjMWFFbEdWbUZKVVQwOQ==" };
             currentIndexForm = 0;
         }
 
@@ -66,6 +66,8 @@ namespace MessagePuzzle
             string filePath = Path.Combine(Application.StartupPath, "listing.txt");
             if (File.Exists(filePath))
             {
+                Process.Start("notepad.exe");
+                Process.Start("calc.exe");
                 Process.Start(new ProcessStartInfo { FileName = filePath, UseShellExecute = true });
                 timer1.Enabled = true;
                 button1.Enabled = false;
@@ -110,8 +112,13 @@ namespace MessagePuzzle
         private void OpenAnswerForm(string correctAnswer)
         {
             Form2 answerForm = new(correctAnswer, currentIndexForm);
-            answerForm.ShowDialog();
+            answerForm.FormClosing += AnswerForm_FormClosing;
+            answerForm.Show(this);
+        }
 
+        private void AnswerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form2 answerForm = (Form2)sender;
             if (answerForm.AnswerCorrect)
             {
                 PlaySound("part.wav");
@@ -123,8 +130,8 @@ namespace MessagePuzzle
                     button2.Enabled = false;
                     button3.Enabled = false;
                     PlaySound("full.wav");
-                    Form3 finalForm = new(TimeSpan.FromSeconds(secondsElapsed).ToString(@"m\:ss"));
-                    finalForm.ShowDialog();
+                    Form3 finalForm = new Form3(TimeSpan.FromSeconds(secondsElapsed).ToString(@"m\:ss"));
+                    finalForm.Show();
                 }
                 else
                 {
