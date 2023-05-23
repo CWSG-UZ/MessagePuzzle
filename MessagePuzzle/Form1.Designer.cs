@@ -46,9 +46,10 @@
             // progressBar1
             // 
             progressBar1.Anchor = AnchorStyles.Top;
-            progressBar1.Location = new Point(150, 10);
+            progressBar1.Location = new Point(171, 14);
+            progressBar1.Margin = new Padding(3, 4, 3, 4);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(703, 20);
+            progressBar1.Size = new Size(803, 26);
             progressBar1.TabIndex = 0;
             // 
             // button1
@@ -57,9 +58,10 @@
             button1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             button1.BackColor = Color.SpringGreen;
             button1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(3, 3);
+            button1.Location = new Point(3, 4);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(94, 44);
+            button1.Size = new Size(107, 58);
             button1.TabIndex = 1;
             button1.Text = "Start";
             button1.UseVisualStyleBackColor = false;
@@ -74,9 +76,9 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(21, 61);
+            label1.Location = new Point(20, 83);
             label1.Name = "label1";
-            label1.Size = new Size(58, 27);
+            label1.Size = new Size(74, 35);
             label1.TabIndex = 2;
             label1.Text = "0:00";
             // 
@@ -88,22 +90,23 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(button1, 0, 0);
             tableLayoutPanel1.Controls.Add(label1, 0, 1);
-            tableLayoutPanel1.Location = new Point(869, 10);
-            tableLayoutPanel1.MaximumSize = new Size(100, 100);
-            tableLayoutPanel1.MinimumSize = new Size(100, 100);
+            tableLayoutPanel1.Location = new Point(993, 14);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel1.MaximumSize = new Size(114, 134);
+            tableLayoutPanel1.MinimumSize = new Size(114, 134);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(100, 100);
+            tableLayoutPanel1.Size = new Size(114, 134);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // instrukcja
             // 
             instrukcja.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            instrukcja.Location = new Point(114, 163);
+            instrukcja.Location = new Point(130, 218);
             instrukcja.Name = "instrukcja";
-            instrukcja.Size = new Size(700, 236);
+            instrukcja.Size = new Size(800, 314);
             instrukcja.TabIndex = 5;
             instrukcja.Text = resources.GetString("instrukcja.Text");
             // 
@@ -111,9 +114,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(114, 69);
+            label2.Location = new Point(130, 92);
             label2.Name = "label2";
-            label2.Size = new Size(468, 32);
+            label2.Size = new Size(579, 40);
             label2.TabIndex = 6;
             label2.Text = "Witaj w programie MessagePuzzle!";
             // 
@@ -125,9 +128,10 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Desktop;
-            button2.Location = new Point(866, 133);
+            button2.Location = new Point(990, 178);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(103, 39);
+            button2.Size = new Size(118, 52);
             button2.TabIndex = 7;
             button2.TabStop = false;
             button2.Text = "Podpowiedź";
@@ -139,9 +143,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Black", 34F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Chartreuse;
-            label3.Location = new Point(303, 399);
+            label3.Location = new Point(346, 532);
             label3.Name = "label3";
-            label3.Size = new Size(358, 65);
+            label3.Size = new Size(443, 81);
             label3.TabIndex = 8;
             label3.Text = " Powodzenia!";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -153,21 +157,23 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ControlText;
-            button3.Location = new Point(866, 417);
+            button3.Location = new Point(990, 556);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(100, 47);
+            button3.Size = new Size(114, 62);
             button3.TabIndex = 9;
             button3.Text = "Poddaj się";
             button3.UseVisualStyleBackColor = false;
             button3.Visible = false;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(984, 500);
+            ClientSize = new Size(1125, 666);
             Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(button2);
@@ -176,7 +182,9 @@
             Controls.Add(tableLayoutPanel1);
             Controls.Add(progressBar1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            MinimumSize = new Size(800, 500);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(910, 646);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

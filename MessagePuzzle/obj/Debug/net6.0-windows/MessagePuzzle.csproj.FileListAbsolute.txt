@@ -18,3 +18,6 @@ E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\ref\MessagePuzzl
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\MessagePuzzle.Properties.Resources.resources
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\MessagePuzzle.Form2.resources
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\MessagePuzzle.Form3.resources
+E:\plawiak\MessagePuzzle\MessagePuzzle\bin\Debug\net6.0-windows\full.wav
+E:\plawiak\MessagePuzzle\MessagePuzzle\bin\Debug\net6.0-windows\listing.txt
+E:\plawiak\MessagePuzzle\MessagePuzzle\bin\Debug\net6.0-windows\part.wav

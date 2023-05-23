@@ -86,7 +86,7 @@ namespace MessagePuzzle
             timer1.Interval = 1000;
             secondsElapsed++;
             label1.Text = TimeSpan.FromSeconds(secondsElapsed).ToString(@"m\:ss");
-            if(secondsElapsed > 900 && isEveryHint)
+            if (secondsElapsed > 900 && isEveryHint)
             {
                 button3.Enabled = true;
                 button3.Visible = true;
@@ -156,8 +156,19 @@ namespace MessagePuzzle
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error", "Exception "+ex, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error", "Exception " + ex, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = Application.OpenForms.OfType<Form2>().FirstOrDefault();
+            form2?.Close();
+            timer1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            Form3 finalForm = new Form3(TimeSpan.FromSeconds(secondsElapsed).ToString(@"m\:ss"));
+            finalForm.ShowDialog();
         }
     }
 }
