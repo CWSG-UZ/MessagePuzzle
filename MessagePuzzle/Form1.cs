@@ -1,19 +1,25 @@
 ﻿using System.Diagnostics;
+using System.Media;
+using System.Windows.Forms;
+
 
 namespace MessagePuzzle
 {
     public partial class Form1 : Form
     {
-
         private int secondsElapsed;
         private string[] hintArray;
         private int currentIndex;
+        private int currentIndexForm;
         private Boolean isEveryHint = false;
+
+        private string[] answers;
 
         public Form1()
         {
             InitializeComponent();
             InitializeHintArray();
+            InitializeAnswers();
             Text = "MessagePuzzle";
         }
 
@@ -35,16 +41,22 @@ namespace MessagePuzzle
             currentIndex = 0;
         }
 
+        private void InitializeAnswers()
+        {
+            answers = new string[] { "A", "B", "C" };
+            currentIndexForm = 0;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             button2.Visible = false;
-            progressBar1.Left = (this.ClientSize.Width - progressBar1.Width) / 2;
+            progressBar1.Left = (ClientSize.Width - progressBar1.Width) / 2;
             progressBar1.Dock = DockStyle.Top;
             tableLayoutPanel1.Top = progressBar1.Height + 10;
-            tableLayoutPanel1.Left = this.ClientSize.Width - button1.Width - 10;
+            tableLayoutPanel1.Left = ClientSize.Width - button1.Width - 10;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
-            label3.Location = new Point((this.ClientSize.Width - label3.Width) / 2, label3.Location.Y);
+            label3.Location = new Point((ClientSize.Width - label3.Width) / 2, label3.Location.Y);
         }
 
 
@@ -59,12 +71,7 @@ namespace MessagePuzzle
                 button1.Enabled = false;
                 button2.Visible = true;
                 button2.Enabled = true;
-                for (int i = 0; i < 3; i++)
-                {
-                    Form newForm = new Form();
-                    newForm.Text = "New Form " + (i + 1);
-                    newForm.Show();
-                }
+                OpenAnswerForm(answers[currentIndexForm]);
             }
             else
             {
@@ -97,6 +104,52 @@ namespace MessagePuzzle
                 isEveryHint = true;
                 currentIndex = 0;
                 button2_Click(sender, e);
+            }
+        }
+
+        private void OpenAnswerForm(string correctAnswer)
+        {
+            Form2 answerForm = new(correctAnswer, currentIndexForm);
+            answerForm.ShowDialog();
+
+            if (answerForm.AnswerCorrect)
+            {
+                PlaySound("part.wav");
+                currentIndexForm++;
+                if (currentIndexForm == answers.Length)
+                {
+                    progressBar1.Value = progressBar1.Maximum;
+                    timer1.Enabled = false;
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                    PlaySound("full.wav");
+                    Form3 finalForm = new(TimeSpan.FromSeconds(secondsElapsed).ToString(@"m\:ss"));
+                    finalForm.ShowDialog();
+                }
+                else
+                {
+                    progressBar1.Value += progressBar1.Maximum / 3;
+                    if (currentIndexForm < answers.Length)
+                    {
+                        OpenAnswerForm(answers[currentIndexForm]);
+                    }
+                }
+            }
+        }
+
+        private static void PlaySound(string soundFileName)
+        {
+            try
+            {
+                string soundFilePath = Path.Combine(Application.StartupPath, soundFileName);
+                using (SoundPlayer player = new SoundPlayer(soundFilePath))
+                {
+                    player.Play();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", "Exception "+ex, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -16,3 +16,5 @@ E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\MessagePuzzle.pd
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\MessagePuzzle.genruntimeconfig.cache
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\ref\MessagePuzzle.dll
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\MessagePuzzle.Properties.Resources.resources
+E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\MessagePuzzle.Form2.resources
+E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Debug\net6.0-windows\MessagePuzzle.Form3.resources
