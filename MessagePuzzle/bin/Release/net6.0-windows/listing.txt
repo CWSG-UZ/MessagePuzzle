@@ -1,0 +1,107 @@
+from math import sqrt
+
+
+def X01():
+    def X02():
+        return 200 ** 3
+    return X02() / 32 - 14726
+
+
+def X06(o):
+    if o in (172593, 71542, 9716, 987139, 8621734):
+        i = "Cmf"
+    elif o in (878623, 981728, 762376, 1896784):
+        i = "Rmd"
+    elif o in (873276, 138198, 138837, 235274, 8167524):
+        i = "Vmp"
+    elif o in (983677, 874234, 814838, 12539):
+        i = "Dmu"
+    u = "KWVJuVnBRbkp"
+    o -= 56400
+    if o > 245 - (184 + 61):
+        u += 'o'
+        k = 'V'
+    elif o < 0:
+        u += 'r'
+        k = 'T'
+    else:
+        u += 'p'
+        k = 'U'
+    return i + u + k
+
+
+x = ((4 + X01()) + 2)
+y = ((256 / 2) - 128) + (sqrt(16))
+z = 1024 * 1024 * 4096 * 0 + (12 - 12)
+
+
+def X07(h):
+        d = 'X' if y == 5 else 'V'
+        if h == (x - y - z):
+            return d + "TwQT"
+        elif h == (x + y + z):
+            return d + "QwOQ"
+        elif h == (x + y - z):
+            return d + "UwOU"
+        elif h == (x - y + z):
+            return d + "AwOA"
+
+
+def X08(y, z):
+    if y - z > sqrt(4**2) - z:
+        return ">="
+    elif y - z < sqrt(4**2) - z:
+        return "<="
+    elif y - z == sqrt(4**2) - z:
+        return "=="
+
+
+a = X06(X01()) + X07(x + y + z) + X08(y, z)
+
+
+# ==========================================================================
+
+
+xdsf = {
+    "Sdctr": ["Y29z", "aW5m", "Z2hwA", "HlydQ", "RnaA", "Z3J0", "cGt"],
+    "0sdgx": ["YXhnc", "V2xo", "LXOs5", "HdmZ2", "GVzdA", "SnRW", "bkk9"],
+    "1mdnxp": ["3ppd", "XghW", "1kd8S", "ZG9ic", "hd2ll", "dW_Fm", "L50Fh"],
+    "Xteunj": ["aGdv", "eGdo", "Sx8W", "c8WCf", "ZMWCh", "FuaWU", "d2FuZQ"]
+}
+
+
+def htkl(dweq):
+    bfh = dweq[:-1] + "s"
+    return f"0{bfh[::-1] + 'x'}"
+
+
+def gkt_u(bdwr):
+    return xdsf[bdwr][-2:]
+
+
+b = xdsf[htkl("gdf")][1] + "".join([lxwj[0] for lxwj in xdsf] + gkt_u(htkl("gdf")))
+
+
+# ==========================================================================
+
+
+clwh = [
+    ["Uxfsi", "d1xzf", "kxVo9", "powji", "wduoMj"],
+    ["78noE", "po7bX", "y8FWx", "pFxwh", "WiSf0"],
+    ["dHB3", "tWw==", "wcbA=", "d3VUZ", "0M3QZ"],
+    ["sdXdw", "cG9QY", "hbVA=", "3VmZg", "KwaW8"],
+    ["OaWU=", "bQQyO", "GZ=ci", "MjM=Z", "MDJkb"]
+]
+
+def wuyx(zlkr):
+    hgrt = ''
+    for ytx, etf in enumerate(clwh):
+        if ytx % 2 == 0:
+            for pgv, ltj in enumerate(etf):
+                hgrt += ltj[pgv]
+        else:
+            for bndp, wrsk in enumerate(etf[::-1]):
+                hgrt += wrsk[bndp]
+    return hgrt[:zlkr]
+        
+c = wuyx(24)

@@ -18,3 +18,6 @@ E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Release\net6.0-windows\refint\Message
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Release\net6.0-windows\MessagePuzzle.pdb
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Release\net6.0-windows\MessagePuzzle.genruntimeconfig.cache
 E:\plawiak\MessagePuzzle\MessagePuzzle\obj\Release\net6.0-windows\ref\MessagePuzzle.dll
+E:\plawiak\MessagePuzzle\MessagePuzzle\bin\Release\net6.0-windows\full.wav
+E:\plawiak\MessagePuzzle\MessagePuzzle\bin\Release\net6.0-windows\listing.txt
+E:\plawiak\MessagePuzzle\MessagePuzzle\bin\Release\net6.0-windows\part.wav
