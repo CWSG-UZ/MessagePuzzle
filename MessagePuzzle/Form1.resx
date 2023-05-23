@@ -60,4 +60,7 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="instrukcja.Text" xml:space="preserve">
+    <value> Za chwilę wyświetlony zostanie kod napisany w języku Python, a Twoim zadaniem będzie odnaleźć wartości trzech zmiennych: a, b oraz c. Do Twojej dyspozycji będą dostępne dwa narzędzia: kalkulator oraz notatnik. Na każdym etapie rozgrywki możesz również skorzystać z podpowiedzi, a po upływie 15 minut i wykorzystaniu wszystkich podpowiedzi możesz się poddać, aby zobaczyć rozwiązanie zagadki. Aby rozpocząć rozgrywkę naciśnij przycisk "Start".</value>
+  </data>
 </root>
