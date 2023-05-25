@@ -86,7 +86,7 @@ namespace MessagePuzzle
             timer1.Interval = 1000;
             secondsElapsed++;
             label1.Text = TimeSpan.FromSeconds(secondsElapsed).ToString(@"m\:ss");
-            if (secondsElapsed > 900 && isEveryHint)
+            if (secondsElapsed > 5 && isEveryHint)
             {
                 button3.Enabled = true;
                 button3.Visible = true;
@@ -168,7 +168,12 @@ namespace MessagePuzzle
             button2.Enabled = false;
             button3.Enabled = false;
             Form3 finalForm = new Form3(TimeSpan.FromSeconds(secondsElapsed).ToString(@"m\:ss"));
-            finalForm.ShowDialog();
+            finalForm.Show();
+        }
+
+        private void instrukcja_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

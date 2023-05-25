@@ -19,7 +19,7 @@ namespace MessagePuzzle
         {
             InitializeComponent();
             this.time = time;
-            Text = "Weź kierunek na UZ!";
+            Text = "UZyskaj wiedzę z Informatyki!";
         }
 
         private void Form3_Load(object sender, EventArgs e)

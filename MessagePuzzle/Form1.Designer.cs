@@ -109,6 +109,7 @@
             instrukcja.Size = new Size(800, 314);
             instrukcja.TabIndex = 5;
             instrukcja.Text = resources.GetString("instrukcja.Text");
+            instrukcja.Click += instrukcja_Click;
             // 
             // label2
             // 
